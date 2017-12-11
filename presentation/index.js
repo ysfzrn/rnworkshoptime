@@ -13,11 +13,17 @@ import {
   Slide,
   Text,
   Image,
-  Appear
+  Appear,
+  Fill,
+  Fit,
+  Layout
 } from "spectacle";
 
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
+import styled from "styled-components";
+require("./index.css");
+
 const Logo = require("../assets/houseofapps.png");
 
 // Require CSS
@@ -66,7 +72,9 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps> React Native için Gerekli araçlar</Heading>
+          <Heading size={6} textColor="secondary" caps>
+            {" "}React Native için Gerekli araçlar
+          </Heading>
           <List>
             <Appear fid="1">
               <ListItem>nodejs ve npm</ListItem>
@@ -88,9 +96,39 @@ export default class Presentation extends React.Component {
 
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <Heading size={6} textColor="tertiary" caps> Bir Projeye Nasıl Başlıyoruz ?</Heading>
+          <Heading size={6} textColor="tertiary" caps>
+            {" "}Bir Projeye Nasıl Başlıyoruz ?
+          </Heading>
+        </Slide>
+        <Slide
+          transition={["fade"]}
+          bgColor="primary"
+          textColor="primary"
+          className="contentstyle"
+          align="center"
+        >
+          <Layout>
+            <Fill>
+              <CodeContainer
+                src="https://snack.expo.io/@yosooff/reactnativeworkshoptime"
+                frameBorder="0"
+                data-snack-iframe="true"
+              />
+            </Fill>
+          </Layout>
+          <script src="https://snack.expo.io/embed.js" />
         </Slide>
       </Deck>
     );
   }
 }
+
+const CodeContainer = styled.iframe`
+   background:#212733;
+   border:1px solid rgba(0,0,0,.16);
+   border-radius:4px;
+   flex:1;
+   width:100%;
+   height:100%;
+   min-height:900px;
+`;
