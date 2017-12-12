@@ -25,7 +25,7 @@ import createTheme from "spectacle/lib/themes/default";
 import styled from "styled-components";
 require("./index.css");
 
-import FlexBoxTable from './flexBoxTable'
+import FlexBoxTable from "./flexBoxTable";
 
 const Logo = require("../assets/houseofapps.png");
 const FolderStructure = require("../assets/folderStructure.png");
@@ -207,11 +207,18 @@ export default class Presentation extends React.Component {
           </Heading>
           <Layout>
             <Fill>
-              <CodeContainer
-                src="https://snack.expo.io/@yosooff/lifecyclemethodlar"
-                frameBorder="0"
-                data-snack-iframe="true"
-              />
+              <div
+                data-snack-id="@yosooff/lifecyclemethodlar"
+                data-snack-platform="ios"
+                data-snack-preview="true"
+                data-snack-theme="dark"
+              >
+                <CodeContainer
+                  src="https://snack.expo.io/@yosooff/lifecyclemethodlar"
+                  frameBorder="0"
+                  data-snack-iframe="true"
+                />
+              </div>
             </Fill>
           </Layout>
           <script async src="https://snack.expo.io/embed.js" />
@@ -230,11 +237,18 @@ export default class Presentation extends React.Component {
           </Heading>
           <Layout>
             <Fill>
-              <CodeContainer
-                src="https://snack.expo.io/@yosooff/props-mantigi"
-                frameBorder="0"
-                data-snack-iframe="true"
-              />
+              <div
+                data-snack-id="@yosooff/props-mantigi"
+                data-snack-platform="ios"
+                data-snack-preview="true"
+                data-snack-theme="dark"
+              >
+                <CodeContainer
+                  src="https://snack.expo.io/@yosooff/props-mantigi"
+                  frameBorder="0"
+                  data-snack-iframe="true"
+                />
+              </div>
             </Fill>
           </Layout>
           <script async src="https://snack.expo.io/embed.js" />
@@ -253,11 +267,19 @@ export default class Presentation extends React.Component {
           </Heading>
           <Layout>
             <Fill>
-              <CodeContainer
-                src="https://snack.expo.io/@yosooff/state-mantigi"
-                frameBorder="0"
-                data-snack-iframe="true"
-              />
+              <div
+                data-snack-id="@yosooff/state-mantigi"
+                data-snack-platform="ios"
+                data-snack-preview="true"
+                data-snack-theme="dark"
+              >
+                <script async src="https://snack.expo.io/embed.js" />
+                <CodeContainer
+                  src="https://snack.expo.io/@yosooff/state-mantigi"
+                  frameBorder="0"
+                  data-snack-iframe="true"
+                />
+              </div>
             </Fill>
           </Layout>
           <script async src="https://snack.expo.io/embed.js" />
@@ -267,11 +289,13 @@ export default class Presentation extends React.Component {
           <Heading>FlexBox</Heading>
         </Slide>
 
-        <Slide transition={["fade"]}
+        <Slide
+          transition={["fade"]}
           bgColor="white"
           textColor="black"
           className="contentstyle"
-          align="center">
+          align="center"
+        >
           <Heading size={5}>FlexBox</Heading>
           <FlexBoxTable />
         </Slide>
@@ -289,11 +313,18 @@ export default class Presentation extends React.Component {
           </Heading>
           <Layout>
             <Fill>
-              <CodeContainer
-                src="https://snack.expo.io/@yosooff/flexbox-style"
-                frameBorder="0"
-                data-snack-iframe="true"
-              />
+              <div
+                data-snack-id="@yosooff/flexbox-style"
+                data-snack-platform="ios"
+                data-snack-preview="true"
+                data-snack-theme="dark"
+              >
+                <CodeContainer
+                  src="https://snack.expo.io/@yosooff/flexbox-style"
+                  frameBorder="0"
+                  data-snack-iframe="true"
+                />
+              </div>
             </Fill>
           </Layout>
           <script async src="https://snack.expo.io/embed.js" />
@@ -310,11 +341,18 @@ export default class Presentation extends React.Component {
         >
           <Layout>
             <Fill>
-              <CodeContainer
-                src="https://snack.expo.io/@yosooff/demo-marvel-app"
-                frameBorder="0"
-                data-snack-iframe="true"
-              />
+              <div
+                data-snack-id="@yosooff/demo-marvel-app"
+                data-snack-platform="ios"
+                data-snack-preview="true"
+                data-snack-theme="dark"
+              >
+                <CodeContainer
+                  src="https://snack.expo.io/@yosooff/demo-marvel-app"
+                  frameBorder="0"
+                  data-snack-iframe="true"
+                />
+              </div>
             </Fill>
           </Layout>
           <script async src="https://snack.expo.io/embed.js" />
@@ -334,4 +372,3 @@ const CodeContainer = styled.iframe`
    height:100%;
    min-height:900px;
 `;
-
