@@ -224,65 +224,34 @@ export default class Presentation extends React.Component {
           <script async src="https://snack.expo.io/embed.js" />
         </Slide>
 
-        <Slide
-          transition={["fade"]}
-          bgColor="primary"
-          textColor="primary"
-          className="contentstyle"
-          align="center"
-        >
+        <Slide transition={["fade"]}>
           <Heading size={6} textColor="quarternary">
             {" "}
             Props Mantığı
           </Heading>
-          <Layout>
-            <Fill>
-              <div
-                data-snack-id="@yosooff/props-mantigi"
-                data-snack-platform="ios"
-                data-snack-preview="true"
-                data-snack-theme="dark"
-              >
-                <CodeContainer
-                  src="https://snack.expo.io/@yosooff/props-mantigi"
-                  frameBorder="0"
-                  data-snack-iframe="true"
-                />
-              </div>
-            </Fill>
-          </Layout>
-          <script async src="https://snack.expo.io/embed.js" />
+          <Text>
+            <Link
+              target="_blank"
+              href="https://snack.expo.io/@yosooff/props-mantigi"
+            >
+              https://snack.expo.io/@yosooff/props-mantigi
+            </Link>
+          </Text>
         </Slide>
 
-        <Slide
-          transition={["fade"]}
-          bgColor="primary"
-          textColor="primary"
-          className="contentstyle"
-          align="center"
-        >
+        <Slide>
           <Heading size={6} textColor="quarternary">
             {" "}
             State Mantığı
           </Heading>
-          <Layout>
-            <Fill>
-              <div
-                data-snack-id="@yosooff/state-mantigi"
-                data-snack-platform="ios"
-                data-snack-preview="true"
-                data-snack-theme="dark"
-              >
-                <script async src="https://snack.expo.io/embed.js" />
-                <CodeContainer
-                  src="https://snack.expo.io/@yosooff/state-mantigi"
-                  frameBorder="0"
-                  data-snack-iframe="true"
-                />
-              </div>
-            </Fill>
-          </Layout>
-          <script async src="https://snack.expo.io/embed.js" />
+          <Text>
+            <Link
+              target="_blank"
+              href="https://snack.expo.io/@yosooff/state-mantigi"
+            >
+              https://snack.expo.io/@yosooff/state-mantigi
+            </Link>
+          </Text>
         </Slide>
 
         <Slide>
@@ -311,51 +280,33 @@ export default class Presentation extends React.Component {
             {" "}
             FlexBox
           </Heading>
-          <Layout>
-            <Fill>
-              <div
-                data-snack-id="@yosooff/flexbox-style"
-                data-snack-platform="ios"
-                data-snack-preview="true"
-                data-snack-theme="dark"
-              >
-                <CodeContainer
-                  src="https://snack.expo.io/@yosooff/flexbox-style"
-                  frameBorder="0"
-                  data-snack-iframe="true"
-                />
-              </div>
-            </Fill>
-          </Layout>
-          <script async src="https://snack.expo.io/embed.js" />
+          <Text>
+            <Link
+              target="_blank"
+              href="https://snack.expo.io/@yosooff/flexbox-style"
+            >
+              https://snack.expo.io/@yosooff/flexbox-style
+            </Link>
+          </Text>
         </Slide>
 
-        <Slide> <Heading>Demo Yapalım</Heading></Slide>
+        <Slide>
+          {" "}<Heading>
+            <Link
+              target="_blank"
+              href="https://snack.expo.io/@yosooff/demo-marvel-app"
+            >
+              Demo Yapalım
+            </Link>{" "}
+          </Heading>
+        </Slide>
 
-        <Slide
-          transition={["fade"]}
-          bgColor="primary"
-          textColor="primary"
-          className="contentstyle"
-          align="center"
-        >
-          <Layout>
-            <Fill>
-              <div
-                data-snack-id="@yosooff/demo-marvel-app"
-                data-snack-platform="ios"
-                data-snack-preview="true"
-                data-snack-theme="dark"
-              >
-                <CodeContainer
-                  src="https://snack.expo.io/@yosooff/demo-marvel-app"
-                  frameBorder="0"
-                  data-snack-iframe="true"
-                />
-              </div>
-            </Fill>
-          </Layout>
-          <script async src="https://snack.expo.io/embed.js" />
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Image src={Logo} />
+          <Text textColor="secondary">olarak</Text>
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Teşekkür Ederiz
+          </Text>
         </Slide>
 
       </Deck>
@@ -371,4 +322,8 @@ const CodeContainer = styled.iframe`
    width:100%;
    height:100%;
    min-height:900px;
+`;
+
+const Link = styled.a`
+  
 `;
