@@ -25,7 +25,7 @@ import createTheme from "spectacle/lib/themes/default";
 import styled from "styled-components";
 require("./index.css");
 
-import FlexBoxTable from './flexBoxTable'
+import FlexBoxTable from "./flexBoxTable";
 
 const Logo = require("../assets/houseofapps.png");
 const FolderStructure = require("../assets/folderStructure.png");
@@ -214,7 +214,7 @@ export default class Presentation extends React.Component {
               />
             </Fill>
           </Layout>
-          <script src="https://snack.expo.io/embed.js" />
+
         </Slide>
 
         <Slide
@@ -237,7 +237,7 @@ export default class Presentation extends React.Component {
               />
             </Fill>
           </Layout>
-          <script src="https://snack.expo.io/embed.js" />
+
         </Slide>
 
         <Slide
@@ -260,18 +260,20 @@ export default class Presentation extends React.Component {
               />
             </Fill>
           </Layout>
-          <script src="https://snack.expo.io/embed.js" />
+
         </Slide>
 
         <Slide>
           <Heading>FlexBox</Heading>
         </Slide>
 
-        <Slide transition={["fade"]}
+        <Slide
+          transition={["fade"]}
           bgColor="white"
           textColor="black"
           className="contentstyle"
-          align="center">
+          align="center"
+        >
           <Heading size={5}>FlexBox</Heading>
           <FlexBoxTable />
         </Slide>
@@ -296,7 +298,7 @@ export default class Presentation extends React.Component {
               />
             </Fill>
           </Layout>
-          <script src="https://snack.expo.io/embed.js" />
+
         </Slide>
 
         <Slide> <Heading>Demo Yapalım</Heading></Slide>
@@ -317,7 +319,7 @@ export default class Presentation extends React.Component {
               />
             </Fill>
           </Layout>
-          <script src="https://snack.expo.io/embed.js" />
+
         </Slide>
 
       </Deck>
@@ -334,4 +336,3 @@ const CodeContainer = styled.iframe`
    height:100%;
    min-height:900px;
 `;
-
