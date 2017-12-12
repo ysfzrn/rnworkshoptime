@@ -358,6 +358,14 @@ export default class Presentation extends React.Component {
           <script async src="https://snack.expo.io/embed.js" />
         </Slide>
 
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Image src={Logo} />
+          <Text textColor="secondary">olarak</Text>
+          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
+            Teşekkür Ederiz
+          </Text>
+        </Slide>
+
       </Deck>
     );
   }
