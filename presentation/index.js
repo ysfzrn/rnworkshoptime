@@ -5,6 +5,7 @@ import React from "react";
 import {
   BlockQuote,
   Cite,
+  Code,
   Deck,
   Heading,
   ListItem,
@@ -24,7 +25,11 @@ import createTheme from "spectacle/lib/themes/default";
 import styled from "styled-components";
 require("./index.css");
 
+import FlexBoxTable from './flexBoxTable'
+
 const Logo = require("../assets/houseofapps.png");
+const FolderStructure = require("../assets/folderStructure.png");
+const BridgeReactNative = require("../assets/bridgeReactNative.jpg");
 
 // Require CSS
 require("normalize.css");
@@ -73,11 +78,11 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>
-            {" "}React Native için Gerekli araçlar
+            {" "}React Native'de geliştirme yapmak için gerekli araçlar
           </Heading>
           <List>
             <Appear fid="1">
-              <ListItem>nodejs ve npm</ListItem>
+              <ListItem>nodejs ve npm ( yarn ) </ListItem>
             </Appear>
           </List>
 
@@ -95,11 +100,207 @@ export default class Presentation extends React.Component {
           </Appear>
 
         </Slide>
+        <Slide>
+          <Heading>
+            npm'de sık kullanılan komutlar
+          </Heading>
+          <List>
+            <ListItem>npm install --save 'paket_ismi'</ListItem>
+            <ListItem>npm install --save -dev 'paket_ismi'</ListItem>
+            <ListItem>npm install -g 'paket_ismi'</ListItem>
+          </List>
+        </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <Heading size={6} textColor="tertiary" caps>
-            {" "}Bir Projeye Nasıl Başlıyoruz ?
+            {" "}React Native ile Projeye Nasıl Başlıyoruz ?
           </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem style={{ marginBottom: "40px" }}>
+                <Code>npm install -g react-native-cli</Code>
+                <Text>
+                  komutu ile react-native-cli kütüphanesini global olarak bilgisayarımıza kuruyoruz
+                </Text>
+              </ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem style={{ marginBottom: "40px" }}>
+                <Code>react-native init helloWorld</Code>
+                <Text>
+                  komutu ile projemizi oluşturuyoruz
+                </Text>
+              </ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem style={{ marginBottom: "40px" }}>
+                <Code>react-native run-ios</Code>
+                {" "}
+                V
+                {" "}
+                <Code>react-native run-android</Code>
+                <Text>
+                  komutu ile projemizi çalıştırıyoruz
+                </Text>
+              </ListItem>
+            </Appear>
+          </List>
         </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Heading size={6}>
+            {" "}
+            React Native Folder Yapısı
+          </Heading>
+          <Image src={FolderStructure} />
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Heading size={6}>
+            {" "}
+            React Native'de Bridge Yapısı
+          </Heading>
+          <Image src={BridgeReactNative} />
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="black" textColor="tertiary">
+          <Heading size={6} textColor="quarternary">
+            {" "}
+            React ile Uygulama Geliştirilirken En Temel Bilinmesi Gerekenler
+          </Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem>
+                <Code style={{ fontSize: "32px", color: "gray" }}>
+                  class MyButton extends React.Component
+                </Code>
+                <Text style={{ color: "white" }}>
+                  kodu ile oluşturduğumuz componentin belli başlı özellikleri oluyor
+                </Text>
+              </ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem>
+                LifeCycle Methodlar
+              </ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem>
+                props mantığı (this.props)
+              </ListItem>
+            </Appear>
+            <Appear fid="4">
+              <ListItem>
+                state mantığı (this.state)
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
+
+        <Slide
+          transition={["fade"]}
+          bgColor="primary"
+          textColor="primary"
+          className="contentstyle"
+          align="center"
+        >
+          <Heading size={6} textColor="quarternary">
+            {" "}
+            LifeCycle Methodlar
+          </Heading>
+          <Layout>
+            <Fill>
+              <CodeContainer
+                src="https://snack.expo.io/@yosooff/lifecyclemethodlar"
+                frameBorder="0"
+                data-snack-iframe="true"
+              />
+            </Fill>
+          </Layout>
+          <script src="https://snack.expo.io/embed.js" />
+        </Slide>
+
+        <Slide
+          transition={["fade"]}
+          bgColor="primary"
+          textColor="primary"
+          className="contentstyle"
+          align="center"
+        >
+          <Heading size={6} textColor="quarternary">
+            {" "}
+            Props Mantığı
+          </Heading>
+          <Layout>
+            <Fill>
+              <CodeContainer
+                src="https://snack.expo.io/@yosooff/props-mantigi"
+                frameBorder="0"
+                data-snack-iframe="true"
+              />
+            </Fill>
+          </Layout>
+          <script src="https://snack.expo.io/embed.js" />
+        </Slide>
+
+        <Slide
+          transition={["fade"]}
+          bgColor="primary"
+          textColor="primary"
+          className="contentstyle"
+          align="center"
+        >
+          <Heading size={6} textColor="quarternary">
+            {" "}
+            State Mantığı
+          </Heading>
+          <Layout>
+            <Fill>
+              <CodeContainer
+                src="https://snack.expo.io/@yosooff/state-mantigi"
+                frameBorder="0"
+                data-snack-iframe="true"
+              />
+            </Fill>
+          </Layout>
+          <script src="https://snack.expo.io/embed.js" />
+        </Slide>
+
+        <Slide>
+          <Heading>FlexBox</Heading>
+        </Slide>
+
+        <Slide transition={["fade"]}
+          bgColor="white"
+          textColor="black"
+          className="contentstyle"
+          align="center">
+          <Heading size={5}>FlexBox</Heading>
+          <FlexBoxTable />
+        </Slide>
+
+        <Slide
+          transition={["fade"]}
+          bgColor="primary"
+          textColor="primary"
+          className="contentstyle"
+          align="center"
+        >
+          <Heading size={6} textColor="quarternary">
+            {" "}
+            FlexBox
+          </Heading>
+          <Layout>
+            <Fill>
+              <CodeContainer
+                src="https://snack.expo.io/@yosooff/flexbox-style"
+                frameBorder="0"
+                data-snack-iframe="true"
+              />
+            </Fill>
+          </Layout>
+          <script src="https://snack.expo.io/embed.js" />
+        </Slide>
+
+        <Slide> <Heading>Demo Yapalım</Heading></Slide>
+
         <Slide
           transition={["fade"]}
           bgColor="primary"
@@ -110,7 +311,7 @@ export default class Presentation extends React.Component {
           <Layout>
             <Fill>
               <CodeContainer
-                src="https://snack.expo.io/@yosooff/reactnativeworkshoptime"
+                src="https://snack.expo.io/@yosooff/demo-marvel-app"
                 frameBorder="0"
                 data-snack-iframe="true"
               />
@@ -118,6 +319,7 @@ export default class Presentation extends React.Component {
           </Layout>
           <script src="https://snack.expo.io/embed.js" />
         </Slide>
+
       </Deck>
     );
   }
@@ -132,3 +334,4 @@ const CodeContainer = styled.iframe`
    height:100%;
    min-height:900px;
 `;
+
