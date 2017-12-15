@@ -21,15 +21,16 @@ import {
 } from "spectacle";
 
 // Import theme
+import FlexBoxTable from "./flexBoxTable";
 import createTheme from "spectacle/lib/themes/default";
 import styled from "styled-components";
 require("./index.css");
 
-import FlexBoxTable from "./flexBoxTable";
-
 const Logo = require("../assets/houseofapps.png");
 const FolderStructure = require("../assets/folderStructure.png");
 const BridgeReactNative = require("../assets/bridgeReactNative.jpg");
+const ReactLogo = require("../assets/reactLogo.png");
+const RnArchitecture = require("../assets/rnArchitecture.png");
 
 // Require CSS
 require("normalize.css");
@@ -57,13 +58,138 @@ export default class Presentation extends React.Component {
       >
         <Slide transition={["zoom"]} bgColor="primary">
           <Image src={Logo} />
+          <br />
           <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
-            React Native Workshop
+            REACT NATIVE İLE UYGULAMA GELİŞTİRME
           </Heading>
-          <Text margin="10px 0 0" textColor="secondary" size={1} fit bold>
-            Hoşgeldiniz
+          <br />
+          <Text textColor="secondary">Türerkan İnce <br /> Yusuf Zeren </Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading textColor="tertiary">
+            House of Apps Kimdir ?
+          </Heading>
+          <Text margin="50px 0 0" textColor="white" bold>
+            React Native konusunda Türkiye'nin en deneyimli yazılım firması olan House Of Apps;
+            <List>
+              <ListItem>mobil uygulama</ListItem>
+              <ListItem>web projeleri</ListItem>
+              <ListItem>ve ilgili backend geliştirmeleri </ListItem>
+            </List>
+            gerçekleştirmektedir.
           </Text>
         </Slide>
+
+        <Slide>
+          <Heading textColor="white">React Native Hakkında</Heading>
+          <Image style={{ width: 500, height: 500 }} src={ReactLogo} />
+        </Slide>
+
+        <Slide transition={["fade"]} textColor="tertiary">
+          <Heading textColor="white">React Native Nerden Çıktı ?</Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem>Bir Facebook projesi, açık kaynak kodlu</ListItem>
+            </Appear>
+
+            <Appear fid="2">
+              <ListItem>React JS'in doğal bir aşaması</ListItem>
+            </Appear>
+
+            <Appear fid="3">
+              <ListItem>React JS Browser DOM'undan bağımsız</ListItem>
+            </Appear>
+          </List>
+
+          <List>
+            <Appear fid="4">
+              <Text textColor="secondary">
+                Farklı render backend'leri yazılması an meselesiydi
+              </Text>
+            </Appear>
+            <List>
+              <Appear fid="5">
+                <ListItem>
+                  Server Side Rendering
+                </ListItem>
+              </Appear>
+
+              <Appear fid="6">
+                <ListItem>
+                  React Native
+                </ListItem>
+              </Appear>
+
+              <Appear fid="7">
+                <ListItem>
+                  Kim bilir neler ?
+                </ListItem>
+              </Appear>
+
+            </List>
+          </List>
+
+        </Slide>
+
+        <Slide transition={["fade"]} textColor="secondary">
+          <Heading textColor="tertiary">React Native Neden Popüler</Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem margin="50px 0 0">
+                Browser’lar sadece JS destekliyor. JS zoraki ortak dil.
+              </ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem margin="50px 0 0">
+                React mevcut JS birikimini ve JSX şablonları ile mevcut HTML/CSS birikimini mobil alanda hızla değerlendirmeyi sağlıyor.
+              </ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem margin="50px 0 0">
+                Pek fazla kod yazmadan hem iOS hem Android’i desteklemek mümkün.
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={["fade"]} textColor="secondary">
+          <Heading textColor="tertiary">React Native Neden Popüler</Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem margin="50px 0 0">
+                Fonksiyonel programlama ve Reaktif programlamadan alınan yaklaşımlar kodu planlamayı, anlamayı ve debug etmeyi çok kolaylaştırıyor.
+              </ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem margin="50px 0 0">
+                Dünya çapında fonksiyonel programlamaya doğru bir yönelim var.
+              </ListItem>
+            </Appear>
+            <Appear fid="3">
+              <ListItem margin="50px 0 0">
+                Benzer denemelerin aksine (örn: Cordova) performans gerçekten tatmin edici.
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={["fade"]} textColor="secondary">
+          <Heading textColor="tertiary">React Native Neden Popüler</Heading>
+          <List>
+            <Appear fid="1">
+              <ListItem margin="50px 0 0">
+                React Native sadece görsel arayüzün nasıl çizileceğini belirliyor. Geri kalan alanda yazılımcıyı özgür bırakıyor. Kısıtlayıcı frameworkler gibi (bkz: Angular.js) değil.
+              </ListItem>
+            </Appear>
+            <Appear fid="2">
+              <ListItem margin="50px 0 0">
+                Arkasında Facebook’un olması, Facebook’un React.js ve React Native’i kendi projelerinde kullanması güven veriyor.
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
+
+        {/***********************YUSUF**********************************/}
         <Slide transition={["fade"]} bgColor="tertiary">
           <Appear fid="1">
             <BlockQuote>
@@ -99,16 +225,6 @@ export default class Presentation extends React.Component {
             </List>
           </Appear>
 
-        </Slide>
-        <Slide>
-          <Heading>
-            npm'de sık kullanılan komutlar
-          </Heading>
-          <List>
-            <ListItem>npm install --save 'paket_ismi'</ListItem>
-            <ListItem>npm install --save -dev 'paket_ismi'</ListItem>
-            <ListItem>npm install -g 'paket_ismi'</ListItem>
-          </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
           <Heading size={6} textColor="tertiary" caps>
@@ -152,12 +268,26 @@ export default class Presentation extends React.Component {
           </Heading>
           <Image src={FolderStructure} />
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+        <Slide
+          className="contentstyle"
+          transition={["fade"]}
+          bgColor="secondary"
+          textColor="primary"
+        >
           <Heading size={6}>
             {" "}
             React Native'de Bridge Yapısı
           </Heading>
-          <Image src={BridgeReactNative} />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+            }}
+          >
+            <Image src={RnArchitecture} />
+            <Image src={BridgeReactNative} />
+          </div>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="black" textColor="tertiary">
